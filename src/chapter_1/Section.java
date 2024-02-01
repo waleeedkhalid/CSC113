@@ -20,9 +20,19 @@ public class Section {
 	}
 	
 	public boolean addStudentAggregation(Student stu) {
+		// check the size
 		if(nbStudents >= Students.length) {
 			System.out.println("Section is Full !");
 			return false;
+		}
+		// check if already exists
+		if(nbStudents > 0) {
+			for(int i = 0; i < nbStudents; i++) {
+				if(stu.getStudentId() == Students[i].getStudentId()) {
+					System.out.println("Student already in Section !");
+					return false;
+				}
+			}
 		}
 		Students[nbStudents] = stu; // Aggregation
 		
@@ -35,6 +45,14 @@ public class Section {
 		if(nbStudents >= Students.length) {
 			System.out.println("Section is Full !");
 			return false;
+		}
+		if(nbStudents > 0) {
+			for(int i = 0; i < nbStudents; i++) {
+				if(stu.getStudentId() == Students[i].getStudentId()) {
+					System.out.println("Student already in Section !");
+					return false;
+				}
+			}
 		}
 		Students[nbStudents] = new Student(stu); // Composition
 		

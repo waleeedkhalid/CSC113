@@ -6,7 +6,7 @@ public class Main {
     	Section sec = new Section(3);
     	
     	Student sAgg = new Student(1, "Abod", 21, "Male");
-    	Student sComp = new Student(1, "Ali", 22, "Male");
+    	Student sComp = new Student(2, "Ali", 22, "Male");
 
     	
     	// Aggregation Add will be enter the reference and not creating new object just do the code =>
