@@ -7,11 +7,18 @@ public class Student {
 	private String studentGender;
 	
 	
-	public Student(int id, String name, int age, String g) {
-		this.studentId = 111000000+id;
+	public Student(int id, String name, int age, String gender) {
+		this.studentId = id;
 		this.studentName = name;
 		this.studentAge = age;
-		this.studentGender = g;
+		this.studentGender = gender;
+	}
+	
+	public Student(Student stu) {
+		this.studentId = stu.studentId;
+		this.studentName = stu.studentName;
+		this.studentAge = stu.studentAge;
+		this.studentGender = stu.studentGender;
 	}
 
 	public String getStudentName() {

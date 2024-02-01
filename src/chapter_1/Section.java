@@ -2,29 +2,56 @@ package chapter_1;
 
 public class Section {
 	
-	private Student Students[];
+	public Student Students[];
 	private int nbStudents;
-	
+
+	public int getNbStudents() {
+		return nbStudents;
+	}
+
 	public int getSectionSize() {
 		return Students.length;
 	}
-	
+
+
 	public Section(int size) {
 		Students = new Student[size];
 		nbStudents = 0;
 	}
 	
-	public boolean addStudent(Student stu) {
+	public boolean addStudentAggregation(Student stu) {
 		if(nbStudents >= Students.length) {
 			System.out.println("Section is Full !");
 			return false;
 		}
-		Students[nbStudents] = stu;
+		Students[nbStudents] = stu; // Aggregation
+		
 		nbStudents++;
 		System.out.println("StudentId: " + stu.getStudentId() + " is Added !");
 		return true;
 	}
 	
+	public boolean addStudentComposition(Student stu) {
+		if(nbStudents >= Students.length) {
+			System.out.println("Section is Full !");
+			return false;
+		}
+		Students[nbStudents] = new Student(stu); // Composition
+		
+		nbStudents++;
+		System.out.println("StudentId: " + stu.getStudentId() + " is Added !");
+		return true;
+	}
+
+	public boolean removeStudent(int StudentId) {
+		int StudentIndex = SearchById(StudentId);
+		if(StudentIndex == -1) return false;
+		System.out.println(Students[StudentIndex].getStudentName() + " removed");
+		Students[StudentIndex] = Students[nbStudents-1];
+		nbStudents--;
+		return true;
+	}
+
 	public int SearchById(int id) {
 		for(int i=0; i < nbStudents; i++) {
 			if(Students[i].getStudentId() == id) 
