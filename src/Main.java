@@ -1,5 +1,5 @@
-import chapter_1.Section;
-import chapter_1.Student;
+import Array_Of_Object.Section;
+import Array_Of_Object.Student;
 
 import java.io.File;
 import java.io.FileNotFoundException;

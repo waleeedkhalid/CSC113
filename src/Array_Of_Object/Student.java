@@ -1,4 +1,4 @@
-package chapter_1;
+package Array_Of_Object;
 
 public class Student {
 	private String studentName;
