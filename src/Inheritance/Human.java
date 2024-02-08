@@ -1,7 +1,7 @@
 package Inheritance;
 public class Human {
-    private double weight, height;
-    private String name, bloodGroup;
+    protected double weight, height;
+    protected String name, bloodGroup;
 
     public Human(double weight, double height, String name, String bloodGroup) {
         this.weight = weight;

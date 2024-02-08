@@ -1,3 +1,4 @@
+package aa.test.classes;
 import Array_Of_Object.Section;
 import Array_Of_Object.Student;
 
@@ -12,7 +13,7 @@ public class Main {
 		File StudentNames = new File("names.txt");
 	    Scanner StudentName = new Scanner(StudentNames);
         for(int i = 1; i < CSC113.getSectionSize(); i++) {
-            CSC113.addStudent(new Student(i, StudentName.nextLine(), 18+i*2-i, "Male"));
+            CSC113.addStudentAggregation(new Student(i, StudentName.nextLine(), 18+i*2-i, "Male"));
         }
 		} catch(FileNotFoundException e) {
 			System.out.println(e);

@@ -9,4 +9,14 @@ public class SchoolStudent  extends Human {
         this.schName = schName;
         this.schId = schId;
     }
+    
+    public String toString() {
+    	return 
+    	"Name: " + name +
+    	"\nBloodGroup: " + bloodGroup +
+    	"\nHeight: " + height +
+    	"\nWeight: " + weight +
+    	"\nSchoolName: " + schName +
+    	"\nSchoolId: " + schId;
+    }
 }
