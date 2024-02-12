@@ -15,6 +15,5 @@ public class Human {
     	System.out.println("weight=" + weight);
     	System.out.println("name=" + name);
     	System.out.println("bloodGroup=" + bloodGroup);
-    	
     }
 }
