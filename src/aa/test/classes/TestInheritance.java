@@ -1,10 +1,17 @@
 package aa.test.classes;
 
+import Inheritance.Human;
 import Inheritance.SchoolStudent;
 
 public class TestInheritance {
 	public static void main(String[] args) {
-		SchoolStudent s1 = new SchoolStudent(7.6, 6.5, "Abod", "O+", "KSU", 446);
-		System.out.println(s1.toString());
+		Human h = new Human(7.6, 7.6, "Suliman", "O-");
+		h.display();
+		
+		System.out.println("=======");
+		SchoolStudent ss = new SchoolStudent(7.6, 6.5, "Abod", "O+", "ABC", 101);
+		ss.display();
+		
+		
 	}
 }

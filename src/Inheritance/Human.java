@@ -9,4 +9,12 @@ public class Human {
         this.name = name;
         this.bloodGroup = bloodGroup;
     }
+    
+    public void display() {
+    	System.out.println("height=" + height);
+    	System.out.println("weight=" + weight);
+    	System.out.println("name=" + name);
+    	System.out.println("bloodGroup=" + bloodGroup);
+    	
+    }
 }

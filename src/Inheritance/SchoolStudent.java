@@ -10,6 +10,13 @@ public class SchoolStudent  extends Human {
         this.schId = schId;
     }
     
+    public void display() {
+    	super.display();
+    	System.out.println(
+    	    	"SchoolName: " + schName +
+    	    	"\nSchoolId: " + schId);
+    }
+    
     public String toString() {
     	return 
     	"Name: " + name +
